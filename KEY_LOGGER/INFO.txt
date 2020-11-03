@@ -1,0 +1,21 @@
+﻿CLASS NAME: KEY_LOGGER
+AUTHOR: W.L.FORBES
+
+EVENTS
+---------------------------------------------------------------------
+EventHandler KEY_PRESSED - This event is raised every time a key is pressed.
+
+PROPERTIES
+---------------------------------------------------------------------
+bool KEY_LOGGER_ACTIVE - This bit is high when the key logger is actively recording keystrokes.
+
+OBJECTS
+---------------------------------------------------------------------
+readonly List<string> KEYS_LIST - Keys pressed in list format.
+readonly DataTable KEYS_TABLE - Keys pressed in a one dimensional table format.
+
+PUBLIC METHODS
+---------------------------------------------------------------------
+void START_KEYLOGGER -Starts logging keys.
+void PAUSE_KEYLOGGER - Pauses key logging.
+void CLEAR_KEYLOGGER - Clears the log.

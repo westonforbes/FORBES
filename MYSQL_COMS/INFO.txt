@@ -1,0 +1,42 @@
+﻿CLASS NAME: MYSQL_COMS
+AUTHOR: W.L.FORBES
+
+CONSTRUCTOR ARGUMENTS
+---------------------------------------------------------------------
+string HOST - The server IP address.
+string DATABASE - The database name.
+string USER - The user to log in as.
+string PASSWORD - The password.
+
+EVENTS
+---------------------------------------------------------------------
+EventHandler CONNECTION_CHANGED - Will raise whenever the connection state changes. 
+CONNECTION_CHANGED has a custom child EventArgs class CONNECTION_CHANGED_EVENT_ARGS	which contains the property bool FULLY_CONNECTED.
+FULLY_CONNECTED is high only on a full connection. It will remain low in all other states.
+
+PUBLIC METHODS
+---------------------------------------------------------------------
+int CONNECT_TO_DB() - Call to connect to the database using the settings from the constructor.
+	RETURNS
+	0 on successful connection and will raise a CONNECTION_CHANGED event.
+	1 for "A connection-level error occurred while opening the connection."
+	2 for "Cannot open a connection without specifying a data source or server."
+	3 for "Unhandled exception type."
+
+void DISCONNECT_FROM_DB() - Call to disconnect from the database. 
+No Exceptions are generated in this method. If there is a database to close then a CONNECTION_CHANGED event will be raised.
+
+DataTable GET_TABLE(string TABLE, string COLUMN_STRING) - Call to get a full MySQL DataTable.
+	ARGUMENTS
+	string TABLE - The name of the table to get.
+	string COLUMN_STRING - A comma delimited string of all the column names in the MySQL table.
+
+int EXECUTE_COMMAND(string COMMAND_STRING, SQL_PARAMETER[] PARAMETERS_ARRAY = null) - Call to execute any SQL command.
+	ARGUMENTS
+	string COMMAND_STRING - The command to execute.
+	optional SQL_PARAMETER[] PARAMETERS_ARRAY - Holds parameter strings.
+	EXAMPLE
+		COMMAND_STRING = "INSERT INTO test_table(column1) VALUES(?param1)"
+		PARAMETERS_ARRAY[0].ESCAPE_STRING = "?param1"
+		PARAMETERS_ARRAY[0].STRING_TO_INSERT = "foobar"
+		This setup would insert the word "foobar" into column 1.

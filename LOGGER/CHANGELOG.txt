@@ -1,0 +1,31 @@
+﻿CHANGELOG
+
+2020-10-15-01 - First complete, stable package.
+
+2020-10-19-01 - Changed how RESET_LOG() does resets. Previously it invoked .Reset() method but that caused weird issues with rebinding the DGV on forms, so
+				I just changed it so that the thread manually goes through each row and deletes it. Its probably a bit slower but its function is more predictable to me.
+
+2020-10-23-01 - Broke this logger library into its own library rather than a copy-n-paste class.
+				Added in CONSOLE_VERBOSE public int which sets the verbose level for the console output. This was in a prototype version but it got lost in development.
+
+2020-10-23-02 - Added readonly modifier to LOG.
+				Made reserved strings (ENTER, EXIT_FAIL, etc) public so they may be modified as the user likes.
+				Removed the reserve string "BLANK" and changed it to "". Why I had it that way in the first place...dunno what I was thinking.
+
+2020-11-02-01 - Migrated logger into FORBES library suite. Managing a bunch of different .dlls was getting annoying. Will start bring more stuff over here.
+
+2020-11-03-01 - Added a unified (static) log so that we can see all logs for a given program.
+				
+				Added a LOG_RESET event which is raised when the log clears itself, if this is raised without the method RESET_LOG being called, 
+				its because overflow protection was triggered.
+
+				Added static ALL_LOGS_RESET event, same as LOG_RESET but applies to the static member. This launches the EventHandler method ALL_LOGS_RESET_EVENT in each instance
+				of the class so that they may clear their own logs.
+
+				Added two new columns to the log, Log Name and Shared Log Entry ID. This makes differentiating which class generated the message easier.
+
+				Changed the constructor so now a friendly log name is required for initialization.
+
+				Added method RESET_ALL_LOGS, which as the name implies, resets all logs.
+
+

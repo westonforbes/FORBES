@@ -1,0 +1,46 @@
+﻿CLASS NAME: LOGGER
+AUTHOR: W.L.FORBES
+
+CONSTRUCTOR ARGUMENTS
+---------------------------------------------------------------------
+string LOG_NAME - Friendly name for the log.
+
+OBJECTS
+---------------------------------------------------------------------
+DataTable LOG - Publicly accessible DataTable that holds all logged messages. See Log Table Format below for layout.
+static DataTable UNIFIED_LOG - Publicly accessible DataTable that holds all logged messages from all instances of this class. See Log Table Format below for layout.
+string LOG.TableName - Is set on class initialization by the passed string LOG_NAME.
+int CONSOLE_VERBOSE - Set a filter on which messages get written to console. Defaults to writing all messages under level 10,000.
+string ENTER_MESSAGE - Default value = ">>> Thread entering function."
+string EXCEPTION_MESSAGE - Default value = "XXX Exception: {0}"
+string EXIT_FAIL_MESSAGE - Default value = "<<< Thread exiting function (fail)."
+string EXIT_SUCCESS_MESSAGE - Default value = "<<< Thread exiting function (success)."
+string INITIALIZE_MESSAGE - Default value = "^^^ Class initialized."
+
+PUBLIC METHODS
+---------------------------------------------------------------------
+void RESET_LOG() - Will erase LOG.
+void RESET_ALL_LOGS() - Will erase UNIFIED_LOG;
+void LOG_MESSAGE() - 99% of this class usage is here. 
+      LOG_MESSAGE Arguments: int GROUP_ID - Stores a group ID for a message to allow for sorting and filtering. Developing GROUP_ID schema is up to the user.
+                             string MESSAGE - Message body text.
+                             optional string EXCEPTION_MESSAGE - If the message is "EXCEPTION" (reserved message) then EXCEPTION_MESSAGE will be stitched into MESSAGE.
+                             Example LOG_INST.LOG_MESSAGE(1,"EXCEPTION", Ex.Message) will stitch in the system generated exception message into the log.
+                             
+      Argument MESSAGE has a couple of reserved messages i.e. if you send these messages, they will output reserved strings as defined in CHECK_IF_RESERVED_MESSAGE().
+      Reserved messages are:
+      INITIALIZE
+      ENTER
+      EXCEPTION - Remember to pass exception message when using this reserved word.
+      EXIT_FAIL
+      EXIT_SUCCESS
+                             
+Log Table Format:
+Column 0 - string LOG_NAME - The friendly name of the log.
+Column 1 - int SHARED_ENTRY_ID - The entry id of all the current logs.
+Column 2 - int ENTRY_ID - The record number for each entry.
+Column 3 - string TIME_STAMP - TimeStamp in ISO 8601 "s" format.
+Column 4 - string FUNCTION - The name of the function that wrote the message.
+Column 5 - int GROUP_ID - Stores a group ID for a message to allow for sorting and filtering. Developing GROUP_ID schema is up to the user.
+Column 6 - string MESSAGE - The message body of the entry.
+Column 7 - int RES_MSG_FLAG - If the message was a reserved message, it will set a cooresponding number, which is useful for color coding viewers.
