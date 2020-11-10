@@ -1,0 +1,5 @@
+﻿CHANGELOG
+
+2020-11-03-01 - Initial git revision. Theres been prior revisions but I never tracked it.
+
+2020-11-10-01 - Migrated documentation over to xml so that it may be viewed in Object Browser.

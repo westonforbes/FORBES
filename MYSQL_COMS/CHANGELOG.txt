@@ -1,3 +1,5 @@
 ﻿CHANGELOG
 
 2020-11-02-01 - Initial.
+
+2020-11-10-01 - Migrated documentation over to xml so that it may be viewed in Object Browser.

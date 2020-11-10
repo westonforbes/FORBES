@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\FORBES.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\FORBES.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>INVERT_WF16x16YELLOW.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="KeystrokeAPI">
@@ -54,11 +59,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="KEY_LOGGER\INFO.txt" />
+    <Content Include="INVERT_WF16x16YELLOW.ico" />
+    <Content Include="KEY_LOGGER\CHANGELOG.txt" />
     <Content Include="LOGGER\CHANGELOG.txt" />
-    <Content Include="LOGGER\INFO.txt" />
     <Content Include="MYSQL_COMS\CHANGELOG.txt" />
-    <Content Include="MYSQL_COMS\INFO.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

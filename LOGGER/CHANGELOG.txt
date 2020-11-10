@@ -28,4 +28,8 @@
 
 				Added method RESET_ALL_LOGS, which as the name implies, resets all logs.
 
+2020-11-10-01 - Migrated documentation over to xml so that it may be viewed in Object Browser.
+				
+				Changed event ALL_LOGS_RESET to public event.
+
 

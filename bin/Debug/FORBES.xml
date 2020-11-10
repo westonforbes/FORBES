@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FORBES</name>
+    </assembly>
+    <members>
+        <member name="T:FORBES.KEY_LOGGER">
+             <summary> This class manages a key logger. It uses the library created by Fabriciorissetto on GitHub.
+            It works well and is much easier than engineering from the ground up.
+            https://github.com/fabriciorissetto/KeystrokeAPI pulled 2020-10-28.
+            I modified the disposal function of the library.
+             </summary>
+        </member>
+        <member name="P:FORBES.KEY_LOGGER.KEY_LOGGER_ACTIVE">
+            <summary>
+            Value is true when the key logger is active.
+            </summary>
+        </member>
+        <member name="E:FORBES.KEY_LOGGER.KEY_PRESSED">
+            <summary>
+            This event is raised on every key press.
+            </summary>
+        </member>
+        <member name="F:FORBES.KEY_LOGGER.KEYS_LIST">
+            <summary>
+            Holds all recorded keys in a List of string format.
+            </summary>
+        </member>
+        <member name="F:FORBES.KEY_LOGGER.KEYS_TABLE">
+            <summary>
+            Holds all recorded keys in a DataTable format. DataTable has one column named "Keys".
+            </summary>
+        </member>
+        <member name="M:FORBES.KEY_LOGGER.START_KEY_LOGGER">
+            <summary>
+            Starts the key logger.
+            </summary>
+        </member>
+        <member name="M:FORBES.KEY_LOGGER.PAUSE_KEY_LOGGER">
+            <summary>
+            Stops the key logger.
+            </summary>
+        </member>
+        <member name="M:FORBES.KEY_LOGGER.CLEAR_KEY_LOGGER">
+            <summary>
+            Erases all recorded keys.
+            </summary>
+        </member>
+        <member name="T:FORBES.LOGGER">
+            <summary>
+            This class creates and manages a event log. It stores the log in a public readonly DataTable and it outputs to the console.
+            </summary>
+        </member>
+        <member name="F:FORBES.LOGGER.CONSOLE_VERBOSE">
+            <summary>
+            This is the threshold value to output to the console. Any messages with an assigned value higher than this value will not print to the console.
+            Higher value messages will continue to appear in the log.
+            </summary>
+        </member>
+        <member name="F:FORBES.LOGGER.LOG">
+            <summary>
+            Holds all the messages of the current class instance.
+            </summary>
+            <remarks>
+            <para> Column 0: Log Name: Name of the log as set by the constructor argument.</para>
+            <para> Column 1: Shared Entry ID: Entry ID of the message, this value is statically controlled (its shared by all instances of this class).Value will roll over at 16,000,000 and log will reset.</para>
+            <para> Column 2: Entry ID: The Entry ID of the message. Value will roll over at 16,000,000 and log will reset.</para>
+            <para> Column 3: IS8601 TimeStamp: DateTime.Now stored in "s" sortable ISO8601 format.</para>
+            <para> Column 4: Function: The name of the function that called the LOG_MESSAGE method.</para>
+            <para> Column 5: Verbose Level: The level of the message. This is picked by the programmer, its intended to allow for filtering.</para>
+            <para> Column 6: Message: The message you wish to write. Note that using string.Format can allow for sending compound messages.</para>
+            <para> Column 7: Reserved Message Flag: Indicates if the message was one of the class defined reserved messages.</para>
+            </remarks>
+        </member>
+        <member name="F:FORBES.LOGGER.UNIFIED_LOG">
+            <summary>
+            Holds all the messages for all instances of this class.
+            </summary>
+            <remarks>
+            <para> Column 0: Log Name: Name of the log as set by the constructor argument.</para>
+            <para> Column 1: Shared Entry ID: Entry ID of the message, this value is statically controlled (its shared by all instances of this class).Value will roll over at 16,000,000 and log will reset.</para>
+            <para> Column 2: Entry ID: The Entry ID of the message. Value will roll over at 16,000,000 and log will reset.</para>
+            <para> Column 3: IS8601 TimeStamp: DateTime.Now stored in "s" sortable ISO8601 format.</para>
+            <para> Column 4: Function: The name of the function that called the LOG_MESSAGE method.</para>
+            <para> Column 5: Verbose Level: The level of the message. This is picked by the programmer, its intended to allow for filtering.</para>
+            <para> Column 6: Message: The message you wish to write. Note that using string.Format can allow for sending compound messages.</para>
+            <para> Column 7: Reserved Message Flag: Indicates if the message was one of the class defined reserved messages.</para>
+            </remarks>
+        </member>
+        <member name="F:FORBES.LOGGER.ENTER_MESSAGE">
+            <summary>
+            Reserved message that is activated when "ENTER" is sent. Default message is "Thread entering function.".
+            </summary>
+        </member>
+        <member name="F:FORBES.LOGGER.EXCEPTION_MESSAGE">
+            <summary>
+            Reserved message that is activated when "EXCEPTION" is sent. Default message is "Exception: {0}". 
+            Note that this reserved message expects the LOG_MESSAGE optional argument EX_MESSAGE to also be passed.
+            </summary>
+        </member>
+        <member name="F:FORBES.LOGGER.EXIT_FAIL_MESSAGE">
+            <summary>
+            Reserved message that is activated when "EXIT_FAIL" is sent. Default message is "Thread exiting function (fail).".
+            </summary>
+        </member>
+        <member name="F:FORBES.LOGGER.EXIT_SUCCESS_MESSAGE">
+            <summary>
+            Reserved message that is activated when "EXIT_SUCCESS" is sent. Default message is "Thread exiting function (success).".
+            </summary>
+        </member>
+        <member name="F:FORBES.LOGGER.INITIALIZE_MESSAGE">
+            <summary>
+            Reserved message that is activated when "INITIALIZE" is sent. Default message is "Class initialized.".
+            </summary>
+        </member>
+        <member name="E:FORBES.LOGGER.LOG_RESET">
+            <summary>
+            This event is raised when the current class instance has its logs reset. 
+            This may be triggered by the user or happen automatically as a overflow protection.
+            </summary>
+        </member>
+        <member name="E:FORBES.LOGGER.ALL_LOGS_RESET">
+            <summary>
+            This event is raised when the log for all instances is reset.
+            This may be triggered by the user or happen automatically as a overflow protection.
+            </summary>
+        </member>
+        <member name="M:FORBES.LOGGER.#ctor(System.String)">
+            <summary>
+            Class constructor, requires a name for the log.
+            </summary>
+            <param name="LOG_NAME"></param>
+        </member>
+        <member name="M:FORBES.LOGGER.LOG_MESSAGE(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            This method is the main point of interaction with this class. When called, it will log the attached message to the logs and display it in the console.
+            </summary>
+            <param name="GROUP_ID"> Value picked by the programmer to help filter/catagorize messages. Developing a schema for this is up to the programmer.</param>
+            <param name="MESSAGE"> The message to be logged.</param>
+            <param name="EX_MESSAGE"> Used to easily pass the Exception text when using the reserved message "EXCEPTION"</param>
+            <param name="FUNCTION">Do not use this, this is used to get the calling method name. Manually assigning this would set the FUNCTION entry in the log.</param>
+        </member>
+        <member name="M:FORBES.LOGGER.RESET_LOG">
+            <summary>
+            This method removes all entries from the current class instance log.
+            </summary>
+        </member>
+        <member name="M:FORBES.LOGGER.RESET_ALL_LOGS">
+            <summary>
+            This method performs a resets the log that is shared by all instances. Note that it will not reset each instances private log, just the shared one.
+            </summary>
+        </member>
+        <member name="T:FORBES.SQL_PARAMETER">
+            <summary>
+            A structure to hold SQL parameters. This is done to prevent SQL injections. Use parameters for any part of a command that a user can influence.
+            </summary>
+        </member>
+        <member name="F:FORBES.SQL_PARAMETER.ESCAPE_STRING">
+            <summary>
+            The sub-string to search for in a command string.
+            </summary>
+        </member>
+        <member name="F:FORBES.SQL_PARAMETER.STRING_TO_INSERT">
+            <summary>
+            The string to insert at the location of the found ESCAPE_STRING.
+            </summary>
+        </member>
+        <member name="T:FORBES.MYSQL_COMS">
+            <summary>
+            This class handles communicating with a MySQL database.
+            </summary>
+        </member>
+        <member name="P:FORBES.MYSQL_COMS.FULLY_CONNECTED">
+            <summary>
+            True when fully connected, false under all other conditions.
+            </summary>
+        </member>
+        <member name="E:FORBES.MYSQL_COMS.CONNECTION_CHANGED">
+            <summary>
+            This event is raised when the connection state is changed. The connection state is embedded in a custom EventArgs
+            called CONNECTION_CHANGED_EVENT_ARGS.
+            </summary>
+        </member>
+        <member name="T:FORBES.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS">
+            <summary>
+            Custom EventArgs structure, holds the connection state in FULLY_CONNECTED.
+            </summary>
+        </member>
+        <member name="M:FORBES.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS.#ctor(System.Boolean)">
+            <summary>
+            Constructor for CONNECTION_CHANGED_EVENT_ARGS class, a value must be assigned on initialization.
+            </summary>
+            <param name="VALUE"> Current connection state.</param>
+        </member>
+        <member name="P:FORBES.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS.FULLY_CONNECTED">
+            <summary>
+            Current Connection State.
+            </summary>
+        </member>
+        <member name="M:FORBES.MYSQL_COMS.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor for the class, connection parameters must be passed in on initialization.
+            </summary>
+            <param name="HOST">The IP address of the server.</param>
+            <param name="DATABASE">The name of the database.</param>
+            <param name="USER">The username.</param>
+            <param name="PASSWORD">The password.</param>
+        </member>
+        <member name="M:FORBES.MYSQL_COMS.CONNECT_TO_DB">
+            <summary>
+            Connects to the database defined in intialization.
+            </summary>
+            <returns>
+            <para> 0: Connection success.</para>
+            <para> 1: A connection-level error occurred while opening the connection.</para>
+            <para> 2: Cannot open a connection without specifying a data source or server.</para>
+            <para> 3: Unhandled exception type.</para>
+            </returns>
+        </member>
+        <member name="M:FORBES.MYSQL_COMS.DISCONNECT_FROM_DB">
+            <summary>
+            Disconnects from the current database. Note that this method does not indicate success or failure.
+            </summary>
+        </member>
+        <member name="M:FORBES.MYSQL_COMS.GET_TABLE(System.String,System.String)">
+            <summary>
+            This method will get a full table from the MySQL database.
+            </summary>
+            <param name="TABLE">The name of the table you want to get.</param>
+            <param name="COLUMN_STRING">A string of all the columns you want to get, separated with a comma. Do not add a space after the comma.</param>
+            <returns>
+            <para>Success: A DataTable populated with data from the MySQL table. It will have the same column structure as COLUMN_STRING.</para>
+            <para>Failure: An empty new DataTable.</para>
+            </returns>
+        </member>
+        <member name="M:FORBES.MYSQL_COMS.EXECUTE_COMMAND(System.String,FORBES.SQL_PARAMETER[])">
+            <summary>
+            This method is used to issue database commands. If the command is a hardcoded command, it can be just sent in COMMAND_STRING. If the command
+            string in any way depended on variables or user inputs, a array of parameters should be sent containing those values, otherwise SQL injections may be possible.
+            </summary>
+            <param name="COMMAND_STRING">The command you wish to execute.</param>
+            <param name="PARAMETERS_ARRAY">The parameters you wish to send. See documentation for the SQL_PARAMETER structure for more details.</param>
+            <returns>
+            <para>Success: A value greater than or equal to zero. This value represents the number of rows affected.</para>
+            <para>Failure: -1</para>
+            </returns>
+        </member>
+    </members>
+</doc>

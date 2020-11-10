@@ -18,3 +18,5 @@ Z:\My Software\Libraries\FORBES\obj\Release\FORBES.csproj.CopyComplete
 Z:\My Software\Libraries\FORBES\obj\Release\FORBES.dll
 Z:\My Software\Libraries\FORBES\obj\Release\FORBES.pdb
 Z:\My Software\Libraries\FORBES\bin\Release\KeystrokeAPI.dll
+Z:\My Software\Libraries\FORBES\obj\Release\FORBES.csprojAssemblyReference.cache
+Z:\My Software\Libraries\FORBES\bin\Release\FORBES.xml
