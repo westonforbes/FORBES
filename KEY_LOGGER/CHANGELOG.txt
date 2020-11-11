@@ -3,3 +3,8 @@
 2020-11-03-01 - Initial git revision. Theres been prior revisions but I never tracked it.
 
 2020-11-10-01 - Migrated documentation over to xml so that it may be viewed in Object Browser.
+
+2020-11-11-01 - Changed the method PAUSE_KEY_LOGGER to STOP_KEY_LOGGER, even though pause is a more accurate description, it was just too difficult to remember.
+				We all naturally look for a STOP command, not a PAUSE command. I also added a note in the method documentation that its not a true stop (does not remove hooks).
+
+				Brought the imported library into the scope of this solution, as I needed to make some tweaks.

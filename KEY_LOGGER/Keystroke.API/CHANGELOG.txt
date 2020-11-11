@@ -1,0 +1,8 @@
+﻿This is a library written by fabriciorissetto the repository is located at https://github.com/fabriciorissetto/KeystrokeAPI this copy was pulled 2020-10-28.
+
+CHANGELOG
+2020-11-11-01 - Modified some of the keycodes to reflect standard windows key codes.
+				Updated the framework to 4.7.2.
+				Added changelog.
+				Removed some build commands and changed build output directory.
+

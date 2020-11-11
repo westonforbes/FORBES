@@ -1,0 +1,6 @@
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\lib\net35\KeystrokeAPI.dll
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\lib\net35\KeystrokeAPI.pdb
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\obj\Release 3.5\KeystrokeAPI.dll
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\obj\Release 3.5\KeystrokeAPI.pdb
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\bin\Release\KeystrokeAPI.dll
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\bin\Release\KeystrokeAPI.pdb

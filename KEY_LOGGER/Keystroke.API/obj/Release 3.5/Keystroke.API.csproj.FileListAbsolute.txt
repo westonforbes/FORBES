@@ -1,0 +1,10 @@
+C:\Users\wforbes\Downloads\KeystrokeAPI2\KeystrokeAPI-master\Keystroke.API\lib\net35\KeystrokeAPI.dll
+C:\Users\wforbes\Downloads\KeystrokeAPI2\KeystrokeAPI-master\Keystroke.API\lib\net35\KeystrokeAPI.pdb
+C:\Users\wforbes\Downloads\KeystrokeAPI2\KeystrokeAPI-master\Keystroke.API\obj\Release 3.5\Keystroke.API.csprojAssemblyReference.cache
+C:\Users\wforbes\Downloads\KeystrokeAPI2\KeystrokeAPI-master\Keystroke.API\obj\Release 3.5\KeystrokeAPI.dll
+C:\Users\wforbes\Downloads\KeystrokeAPI2\KeystrokeAPI-master\Keystroke.API\obj\Release 3.5\KeystrokeAPI.pdb
+Z:\My Software\Libraries\KeyLoggerLibrary(Imported)\Keystroke.API\lib\net35\KeystrokeAPI.dll
+Z:\My Software\Libraries\KeyLoggerLibrary(Imported)\Keystroke.API\lib\net35\KeystrokeAPI.pdb
+Z:\My Software\Libraries\KeyLoggerLibrary(Imported)\Keystroke.API\obj\Release 3.5\Keystroke.API.csprojAssemblyReference.cache
+Z:\My Software\Libraries\KeyLoggerLibrary(Imported)\Keystroke.API\obj\Release 3.5\KeystrokeAPI.dll
+Z:\My Software\Libraries\KeyLoggerLibrary(Imported)\Keystroke.API\obj\Release 3.5\KeystrokeAPI.pdb

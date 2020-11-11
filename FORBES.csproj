@@ -36,9 +36,6 @@
     <ApplicationIcon>INVERT_WF16x16YELLOW.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="KeystrokeAPI">
-      <HintPath>KEY_LOGGER\KeystrokeAPI.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
@@ -63,6 +60,12 @@
     <Content Include="KEY_LOGGER\CHANGELOG.txt" />
     <Content Include="LOGGER\CHANGELOG.txt" />
     <Content Include="MYSQL_COMS\CHANGELOG.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="KEY_LOGGER\Keystroke.API\KEYSTROKE_LIBRARY_IMPORTED.csproj">
+      <Project>{f6fec17e-e22d-4149-a8a8-9f64c3c905d3}</Project>
+      <Name>KEYSTROKE_LIBRARY_IMPORTED</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

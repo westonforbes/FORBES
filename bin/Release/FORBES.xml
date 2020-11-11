@@ -36,9 +36,9 @@
             Starts the key logger.
             </summary>
         </member>
-        <member name="M:FORBES.KEY_LOGGER.PAUSE_KEY_LOGGER">
+        <member name="M:FORBES.KEY_LOGGER.STOP_KEY_LOGGER">
             <summary>
-            Stops the key logger.
+            Stops the key logger. Note that this method does not remove installed hooks. Hooks can only be removed on application close.
             </summary>
         </member>
         <member name="M:FORBES.KEY_LOGGER.CLEAR_KEY_LOGGER">
