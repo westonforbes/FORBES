@@ -21,3 +21,4 @@ Z:\My Software\Libraries\FORBES\bin\Release\KeystrokeAPI.dll
 Z:\My Software\Libraries\FORBES\obj\Release\FORBES.csprojAssemblyReference.cache
 Z:\My Software\Libraries\FORBES\bin\Release\FORBES.xml
 Z:\My Software\Libraries\FORBES\bin\Release\KeystrokeAPI.pdb
+Z:\My Software\Libraries\FORBES\obj\Release\FORBES.csproj.CoreCompileInputs.cache

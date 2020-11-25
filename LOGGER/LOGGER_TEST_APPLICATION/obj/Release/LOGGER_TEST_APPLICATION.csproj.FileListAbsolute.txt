@@ -28,3 +28,4 @@ Z:\My Software\Libraries\FORBES\LOGGER\LOGGER_TEST_APPLICATION\obj\Release\LOGGE
 Z:\My Software\Libraries\FORBES\LOGGER\LOGGER_TEST_APPLICATION\obj\Release\LOGGER_TEST_APPLICATION.pdb
 Z:\My Software\Libraries\FORBES\LOGGER\LOGGER_TEST_APPLICATION\bin\Release\FORBES.xml
 Z:\My Software\Libraries\FORBES\LOGGER\LOGGER_TEST_APPLICATION\bin\Release\KeystrokeAPI.pdb
+Z:\My Software\Libraries\FORBES\LOGGER\LOGGER_TEST_APPLICATION\obj\Release\LOGGER_TEST_APPLICATION.csproj.CoreCompileInputs.cache

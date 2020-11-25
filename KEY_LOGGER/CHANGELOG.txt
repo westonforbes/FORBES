@@ -8,3 +8,7 @@
 				We all naturally look for a STOP command, not a PAUSE command. I also added a note in the method documentation that its not a true stop (does not remove hooks).
 
 				Brought the imported library into the scope of this solution, as I needed to make some tweaks.
+
+2020-11-12-01 - Modified the namespace from FORBES to FORBES.KEY_LOGGER_NAMESPACE.
+
+2020-11-25-01 - CHANGELOG MIGRATING TO ROOT FOLDER CHANGELOG.md

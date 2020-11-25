@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
-namespace FORBES
+namespace FORBES.KEY_LOGGER_NAMESPACE
 {
     /// <summary> This class manages a key logger. It uses the library created by Fabriciorissetto on GitHub.
     ///It works well and is much easier than engineering from the ground up.

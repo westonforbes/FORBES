@@ -3,3 +3,7 @@
 2020-11-02-01 - Initial.
 
 2020-11-10-01 - Migrated documentation over to xml so that it may be viewed in Object Browser.
+
+2020-11-12-01 - Modified the namespace from FORBES to FORBES.MYSQL_COMS_NAMESPACE.
+
+2020-11-25-01 - CHANGELOG MIGRATING TO ROOT FOLDER CHANGELOG.md

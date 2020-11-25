@@ -4,60 +4,60 @@
         <name>FORBES</name>
     </assembly>
     <members>
-        <member name="T:FORBES.KEY_LOGGER">
+        <member name="T:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER">
              <summary> This class manages a key logger. It uses the library created by Fabriciorissetto on GitHub.
             It works well and is much easier than engineering from the ground up.
             https://github.com/fabriciorissetto/KeystrokeAPI pulled 2020-10-28.
             I modified the disposal function of the library.
              </summary>
         </member>
-        <member name="P:FORBES.KEY_LOGGER.KEY_LOGGER_ACTIVE">
+        <member name="P:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER.KEY_LOGGER_ACTIVE">
             <summary>
             Value is true when the key logger is active.
             </summary>
         </member>
-        <member name="E:FORBES.KEY_LOGGER.KEY_PRESSED">
+        <member name="E:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER.KEY_PRESSED">
             <summary>
             This event is raised on every key press.
             </summary>
         </member>
-        <member name="F:FORBES.KEY_LOGGER.KEYS_LIST">
+        <member name="F:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER.KEYS_LIST">
             <summary>
             Holds all recorded keys in a List of string format.
             </summary>
         </member>
-        <member name="F:FORBES.KEY_LOGGER.KEYS_TABLE">
+        <member name="F:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER.KEYS_TABLE">
             <summary>
             Holds all recorded keys in a DataTable format. DataTable has one column named "Keys".
             </summary>
         </member>
-        <member name="M:FORBES.KEY_LOGGER.START_KEY_LOGGER">
+        <member name="M:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER.START_KEY_LOGGER">
             <summary>
             Starts the key logger.
             </summary>
         </member>
-        <member name="M:FORBES.KEY_LOGGER.STOP_KEY_LOGGER">
+        <member name="M:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER.STOP_KEY_LOGGER">
             <summary>
             Stops the key logger. Note that this method does not remove installed hooks. Hooks can only be removed on application close.
             </summary>
         </member>
-        <member name="M:FORBES.KEY_LOGGER.CLEAR_KEY_LOGGER">
+        <member name="M:FORBES.KEY_LOGGER_NAMESPACE.KEY_LOGGER.CLEAR_KEY_LOGGER">
             <summary>
             Erases all recorded keys.
             </summary>
         </member>
-        <member name="T:FORBES.LOGGER">
+        <member name="T:FORBES.LOGGER_NAMESPACE.LOGGER">
             <summary>
             This class creates and manages a event log. It stores the log in a public readonly DataTable and it outputs to the console.
             </summary>
         </member>
-        <member name="F:FORBES.LOGGER.CONSOLE_VERBOSE">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.CONSOLE_VERBOSE">
             <summary>
             This is the threshold value to output to the console. Any messages with an assigned value higher than this value will not print to the console.
             Higher value messages will continue to appear in the log.
             </summary>
         </member>
-        <member name="F:FORBES.LOGGER.LOG">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.LOG">
             <summary>
             Holds all the messages of the current class instance.
             </summary>
@@ -72,7 +72,7 @@
             <para> Column 7: Reserved Message Flag: Indicates if the message was one of the class defined reserved messages.</para>
             </remarks>
         </member>
-        <member name="F:FORBES.LOGGER.UNIFIED_LOG">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.UNIFIED_LOG">
             <summary>
             Holds all the messages for all instances of this class.
             </summary>
@@ -87,51 +87,51 @@
             <para> Column 7: Reserved Message Flag: Indicates if the message was one of the class defined reserved messages.</para>
             </remarks>
         </member>
-        <member name="F:FORBES.LOGGER.ENTER_MESSAGE">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.ENTER_MESSAGE">
             <summary>
             Reserved message that is activated when "ENTER" is sent. Default message is "Thread entering function.".
             </summary>
         </member>
-        <member name="F:FORBES.LOGGER.EXCEPTION_MESSAGE">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.EXCEPTION_MESSAGE">
             <summary>
             Reserved message that is activated when "EXCEPTION" is sent. Default message is "Exception: {0}". 
             Note that this reserved message expects the LOG_MESSAGE optional argument EX_MESSAGE to also be passed.
             </summary>
         </member>
-        <member name="F:FORBES.LOGGER.EXIT_FAIL_MESSAGE">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.EXIT_FAIL_MESSAGE">
             <summary>
             Reserved message that is activated when "EXIT_FAIL" is sent. Default message is "Thread exiting function (fail).".
             </summary>
         </member>
-        <member name="F:FORBES.LOGGER.EXIT_SUCCESS_MESSAGE">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.EXIT_SUCCESS_MESSAGE">
             <summary>
             Reserved message that is activated when "EXIT_SUCCESS" is sent. Default message is "Thread exiting function (success).".
             </summary>
         </member>
-        <member name="F:FORBES.LOGGER.INITIALIZE_MESSAGE">
+        <member name="F:FORBES.LOGGER_NAMESPACE.LOGGER.INITIALIZE_MESSAGE">
             <summary>
             Reserved message that is activated when "INITIALIZE" is sent. Default message is "Class initialized.".
             </summary>
         </member>
-        <member name="E:FORBES.LOGGER.LOG_RESET">
+        <member name="E:FORBES.LOGGER_NAMESPACE.LOGGER.LOG_RESET">
             <summary>
             This event is raised when the current class instance has its logs reset. 
             This may be triggered by the user or happen automatically as a overflow protection.
             </summary>
         </member>
-        <member name="E:FORBES.LOGGER.ALL_LOGS_RESET">
+        <member name="E:FORBES.LOGGER_NAMESPACE.LOGGER.ALL_LOGS_RESET">
             <summary>
             This event is raised when the log for all instances is reset.
             This may be triggered by the user or happen automatically as a overflow protection.
             </summary>
         </member>
-        <member name="M:FORBES.LOGGER.#ctor(System.String)">
+        <member name="M:FORBES.LOGGER_NAMESPACE.LOGGER.#ctor(System.String)">
             <summary>
             Class constructor, requires a name for the log.
             </summary>
             <param name="LOG_NAME"></param>
         </member>
-        <member name="M:FORBES.LOGGER.LOG_MESSAGE(System.Int32,System.String,System.String,System.String)">
+        <member name="M:FORBES.LOGGER_NAMESPACE.LOGGER.LOG_MESSAGE(System.Int32,System.String,System.String,System.String)">
             <summary>
             This method is the main point of interaction with this class. When called, it will log the attached message to the logs and display it in the console.
             </summary>
@@ -140,64 +140,64 @@
             <param name="EX_MESSAGE"> Used to easily pass the Exception text when using the reserved message "EXCEPTION"</param>
             <param name="FUNCTION">Do not use this, this is used to get the calling method name. Manually assigning this would set the FUNCTION entry in the log.</param>
         </member>
-        <member name="M:FORBES.LOGGER.RESET_LOG">
+        <member name="M:FORBES.LOGGER_NAMESPACE.LOGGER.RESET_LOG">
             <summary>
             This method removes all entries from the current class instance log.
             </summary>
         </member>
-        <member name="M:FORBES.LOGGER.RESET_ALL_LOGS">
+        <member name="M:FORBES.LOGGER_NAMESPACE.LOGGER.RESET_ALL_LOGS">
             <summary>
             This method performs a resets the log that is shared by all instances. Note that it will not reset each instances private log, just the shared one.
             </summary>
         </member>
-        <member name="T:FORBES.SQL_PARAMETER">
+        <member name="T:FORBES.MYSQL_COMS_NAMESPACE.SQL_PARAMETER">
             <summary>
             A structure to hold SQL parameters. This is done to prevent SQL injections. Use parameters for any part of a command that a user can influence.
             </summary>
         </member>
-        <member name="F:FORBES.SQL_PARAMETER.ESCAPE_STRING">
+        <member name="F:FORBES.MYSQL_COMS_NAMESPACE.SQL_PARAMETER.ESCAPE_STRING">
             <summary>
             The sub-string to search for in a command string.
             </summary>
         </member>
-        <member name="F:FORBES.SQL_PARAMETER.STRING_TO_INSERT">
+        <member name="F:FORBES.MYSQL_COMS_NAMESPACE.SQL_PARAMETER.STRING_TO_INSERT">
             <summary>
             The string to insert at the location of the found ESCAPE_STRING.
             </summary>
         </member>
-        <member name="T:FORBES.MYSQL_COMS">
+        <member name="T:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS">
             <summary>
             This class handles communicating with a MySQL database.
             </summary>
         </member>
-        <member name="P:FORBES.MYSQL_COMS.FULLY_CONNECTED">
+        <member name="P:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.FULLY_CONNECTED">
             <summary>
             True when fully connected, false under all other conditions.
             </summary>
         </member>
-        <member name="E:FORBES.MYSQL_COMS.CONNECTION_CHANGED">
+        <member name="E:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.CONNECTION_CHANGED">
             <summary>
             This event is raised when the connection state is changed. The connection state is embedded in a custom EventArgs
             called CONNECTION_CHANGED_EVENT_ARGS.
             </summary>
         </member>
-        <member name="T:FORBES.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS">
+        <member name="T:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS">
             <summary>
             Custom EventArgs structure, holds the connection state in FULLY_CONNECTED.
             </summary>
         </member>
-        <member name="M:FORBES.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS.#ctor(System.Boolean)">
+        <member name="M:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS.#ctor(System.Boolean)">
             <summary>
             Constructor for CONNECTION_CHANGED_EVENT_ARGS class, a value must be assigned on initialization.
             </summary>
             <param name="VALUE"> Current connection state.</param>
         </member>
-        <member name="P:FORBES.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS.FULLY_CONNECTED">
+        <member name="P:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.CONNECTION_CHANGED_EVENT_ARGS.FULLY_CONNECTED">
             <summary>
             Current Connection State.
             </summary>
         </member>
-        <member name="M:FORBES.MYSQL_COMS.#ctor(System.String,System.String,System.String,System.String)">
+        <member name="M:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.#ctor(System.String,System.String,System.String,System.String)">
             <summary>
             Constructor for the class, connection parameters must be passed in on initialization.
             </summary>
@@ -206,7 +206,7 @@
             <param name="USER">The username.</param>
             <param name="PASSWORD">The password.</param>
         </member>
-        <member name="M:FORBES.MYSQL_COMS.CONNECT_TO_DB">
+        <member name="M:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.CONNECT_TO_DB">
             <summary>
             Connects to the database defined in intialization.
             </summary>
@@ -217,12 +217,12 @@
             <para> 3: Unhandled exception type.</para>
             </returns>
         </member>
-        <member name="M:FORBES.MYSQL_COMS.DISCONNECT_FROM_DB">
+        <member name="M:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.DISCONNECT_FROM_DB">
             <summary>
             Disconnects from the current database. Note that this method does not indicate success or failure.
             </summary>
         </member>
-        <member name="M:FORBES.MYSQL_COMS.GET_TABLE(System.String,System.String)">
+        <member name="M:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.GET_TABLE(System.String,System.String)">
             <summary>
             This method will get a full table from the MySQL database.
             </summary>
@@ -233,7 +233,7 @@
             <para>Failure: An empty new DataTable.</para>
             </returns>
         </member>
-        <member name="M:FORBES.MYSQL_COMS.EXECUTE_COMMAND(System.String,FORBES.SQL_PARAMETER[])">
+        <member name="M:FORBES.MYSQL_COMS_NAMESPACE.MYSQL_COMS.EXECUTE_COMMAND(System.String,FORBES.MYSQL_COMS_NAMESPACE.SQL_PARAMETER[])">
             <summary>
             This method is used to issue database commands. If the command is a hardcoded command, it can be just sent in COMMAND_STRING. If the command
             string in any way depended on variables or user inputs, a array of parameters should be sent containing those values, otherwise SQL injections may be possible.
@@ -244,6 +244,67 @@
             <para>Success: A value greater than or equal to zero. This value represents the number of rows affected.</para>
             <para>Failure: -1</para>
             </returns>
+        </member>
+        <member name="T:FORBES.TABLE_PROCESSOR_NAMESPACE.INSTRUCTION_SET">
+            <summary>
+            This static class handles some simple operations related to dealing with the INSTRUCTION_TABLE.
+            </summary>
+        </member>
+        <member name="F:FORBES.TABLE_PROCESSOR_NAMESPACE.INSTRUCTION_SET.EVENTS">
+            <summary>
+            The event log for the class.
+            </summary>
+        </member>
+        <member name="M:FORBES.TABLE_PROCESSOR_NAMESPACE.INSTRUCTION_SET.LOAD_INSTRUCTION_FILE(System.String)">
+            <summary>
+            This function will load in a INSTRUCTION_TABLE from a file.
+            </summary>
+            <param name="PATH">The filepath of the file to read in.</param>
+            <returns>A DataTable formatted in the INSTRUCTION_TABLE format.</returns>
+        </member>
+        <member name="M:FORBES.TABLE_PROCESSOR_NAMESPACE.INSTRUCTION_SET.WRITE_INSTRUCTION_FILE(System.Data.DataTable,System.String)">
+            <summary>
+            This function will write a copy of the instruction set to a file.
+            </summary>
+            <param name="INSTRUCTION_TABLE">A instruction DataTable following the format created by CREATE_INSTRUCTION_TABLE.</param>
+            <param name="PATH">The full filepath of the new file.</param>
+            <returns>True on success, false on error.</returns>
+        </member>
+        <member name="M:FORBES.TABLE_PROCESSOR_NAMESPACE.INSTRUCTION_SET.CREATE_INSTRUCTION_TABLE">
+            <summary>
+            This function creates a properly formatted instruction table.
+            </summary>
+            <returns>A single column DataTable with the first row containing entry "CSV".</returns>
+        </member>
+        <member name="T:FORBES.TABLE_PROCESSOR_NAMESPACE.TABLE_PROCESSOR">
+            <summary>
+            This class processes CSV files and can perform a whole host of transformations on them. The main access point is PROCESS_INSTRUCTIONS.
+            See documentation for a list of available commands.
+            </summary>
+        </member>
+        <member name="F:FORBES.TABLE_PROCESSOR_NAMESPACE.TABLE_PROCESSOR.EVENTS">
+            <summary>
+            The event log for the class.
+            </summary>
+        </member>
+        <member name="M:FORBES.TABLE_PROCESSOR_NAMESPACE.TABLE_PROCESSOR.#ctor">
+            <summary>
+            Constructor for the class.
+            </summary>
+        </member>
+        <member name="M:FORBES.TABLE_PROCESSOR_NAMESPACE.TABLE_PROCESSOR.PROCESS_INSTRUCTIONS(System.Data.DataTable@,System.Data.DataTable@,System.String,System.Char,System.String,System.Char)">
+            <summary>
+            This method transforms CSV file data by performing operations on it as defined by INSTRUCTION_TABLE.
+            It outputs these transformations to DATA_TABLE and can optionally write to new files.
+            See documentation for a list of valid instructions.
+            </summary>
+            <param name="DATA_TABLE">The table to transform.</param>
+            <param name="INSTRUCTION_TABLE">A list of instructions. The table must be formatted properly. Use the INSTRUCTION_SET class to do this.</param>
+            <param name="INPUT_PATH">The input path of the CSV file.</param>
+            <param name="INPUT_DELIMITER">The delimeter used in the CSV file.</param>
+            <param name="OUTPUT_PATH">The optional output file path. Be sure to include if your instructions contain a WRT command.</param>
+            <param name="OUTPUT_DELIMITER">The delimeter used in the output file. Defaults to a comma.</param>
+            <returns>0 on successful execution, 1 on failure.</returns>
         </member>
     </members>
 </doc>

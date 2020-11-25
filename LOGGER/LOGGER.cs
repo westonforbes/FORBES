@@ -2,7 +2,7 @@
 using System.Data;
 using System.Collections.Generic;
 
-namespace FORBES
+namespace FORBES.LOGGER_NAMESPACE
 {
     /// <summary>
     /// This class creates and manages a event log. It stores the log in a public readonly DataTable and it outputs to the console.

@@ -4,3 +4,5 @@ Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\obj\Release 3.5\Keystro
 Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\obj\Release 3.5\KeystrokeAPI.pdb
 Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\bin\Release\KeystrokeAPI.dll
 Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\bin\Release\KeystrokeAPI.pdb
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\obj\Release 3.5\KEYSTROKE_LIBRARY_IMPORTED.csprojAssemblyReference.cache
+Z:\My Software\Libraries\FORBES\KEY_LOGGER\Keystroke.API\obj\Release 3.5\KEYSTROKE_LIBRARY_IMPORTED.csproj.CoreCompileInputs.cache

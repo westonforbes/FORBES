@@ -1,0 +1,5 @@
+﻿CHANGELOG
+
+2020-11-12-01 - Initial. This used to be its own library but I just want to package all my libraries in once spot.
+
+2020-11-25-01 - CHANGELOG MIGRATING TO ROOT FOLDER CHANGELOG.md

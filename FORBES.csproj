@@ -54,12 +54,16 @@
     <Compile Include="LOGGER\LOGGER.cs" />
     <Compile Include="MYSQL_COMS\MySQL_COMS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TABLE_PROCESSOR\TABLE_PROCESSOR.cs" />
+    <Compile Include="TRIANGULATOR\TRIANGULATOR.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="INVERT_WF16x16YELLOW.ico" />
     <Content Include="KEY_LOGGER\CHANGELOG.txt" />
     <Content Include="LOGGER\CHANGELOG.txt" />
     <Content Include="MYSQL_COMS\CHANGELOG.txt" />
+    <Content Include="TABLE_PROCESSOR\CHANGELOG.txt" />
+    <Content Include="TRIANGULATOR\CHANGELOG.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="KEY_LOGGER\Keystroke.API\KEYSTROKE_LIBRARY_IMPORTED.csproj">

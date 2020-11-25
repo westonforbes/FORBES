@@ -1,8 +1,9 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Data;
+using FORBES.LOGGER_NAMESPACE;
 
-namespace FORBES
+namespace FORBES.MYSQL_COMS_NAMESPACE
 {
     /// <summary>
     /// A structure to hold SQL parameters. This is done to prevent SQL injections. Use parameters for any part of a command that a user can influence.

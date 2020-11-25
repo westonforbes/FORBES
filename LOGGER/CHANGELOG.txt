@@ -32,4 +32,8 @@
 				
 				Changed event ALL_LOGS_RESET to public event.
 
+2020-11-12-01 - Modified the namespace from FORBES to FORBES.LOGGER_NAMESPACE.
+
+2020-11-25-01 - CHANGELOG MIGRATING TO ROOT FOLDER CHANGELOG.md
+
 

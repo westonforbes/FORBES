@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using FORBES;
+using FORBES.LOGGER_NAMESPACE;
 
 namespace LOGGER_TEST_APPLICATION
 {

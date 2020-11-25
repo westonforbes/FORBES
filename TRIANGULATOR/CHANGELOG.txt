@@ -1,0 +1,11 @@
+﻿CHANGELOG
+
+2020-10-19-01 - First complete, stable package.
+
+2020-10-22-01 - Modified triangulate function to output points as calculated by all intersections, rather than just outputting the averaged point.
+
+2020-10-23-01 - Broke Triangulator into its own library rather than a copy-n-paste class. Also references LoggerLibrary build 2020.10.23.01.
+
+2020-11-25-01 - Merged into FORBES library. Previously referenced LoggerLibrary has also been merged.
+
+2020-11-25-01 - CHANGELOG MIGRATING TO ROOT FOLDER CHANGELOG.md
