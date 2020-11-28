@@ -22,3 +22,27 @@ Z:\My Software\Libraries\FORBES\obj\Release\FORBES.csprojAssemblyReference.cache
 Z:\My Software\Libraries\FORBES\bin\Release\FORBES.xml
 Z:\My Software\Libraries\FORBES\bin\Release\KeystrokeAPI.pdb
 Z:\My Software\Libraries\FORBES\obj\Release\FORBES.csproj.CoreCompileInputs.cache
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\FORBES.xml
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\FORBES.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\FORBES.pdb
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\KeystrokeAPI.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\MySql.Data.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\Google.Protobuf.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\Zstandard.Net.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\Ubiety.Dns.Core.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\Renci.SshNet.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\System.Memory.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\System.Buffers.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\K4os.Compression.LZ4.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\K4os.Hash.xxHash.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\System.Numerics.Vectors.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\KeystrokeAPI.pdb
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\bin\Release\MySql.Data.xml
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\obj\Release\FORBES.csprojAssemblyReference.cache
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\obj\Release\FORBES.csproj.CoreCompileInputs.cache
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\obj\Release\FORBES.csproj.CopyComplete
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\obj\Release\FORBES.dll
+C:\Users\wforbes\Documents\SOFTWARE\FORBES\obj\Release\FORBES.pdb
