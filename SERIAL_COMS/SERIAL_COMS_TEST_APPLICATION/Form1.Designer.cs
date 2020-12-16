@@ -30,13 +30,15 @@
         {
             this.CMBO_BOX_BAUD_RATES = new System.Windows.Forms.ComboBox();
             this.GRP_BOX_CONNECT = new System.Windows.Forms.GroupBox();
+            this.BNT_ADVANCED = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.CMBO_BOX_PORTS = new System.Windows.Forms.ComboBox();
             this.LBL_BAUD = new System.Windows.Forms.Label();
             this.BTN_CONNECT = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BNT_ADVANCED = new System.Windows.Forms.Button();
             this.GRP_BOX_DATA = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.GRP_BOX_CONNECT.SuspendLayout();
+            this.GRP_BOX_DATA.SuspendLayout();
             this.SuspendLayout();
             // 
             // CMBO_BOX_BAUD_RATES
@@ -61,6 +63,23 @@
             this.GRP_BOX_CONNECT.TabIndex = 3;
             this.GRP_BOX_CONNECT.TabStop = false;
             this.GRP_BOX_CONNECT.Text = "Connection";
+            // 
+            // BNT_ADVANCED
+            // 
+            this.BNT_ADVANCED.Location = new System.Drawing.Point(10, 151);
+            this.BNT_ADVANCED.Name = "BNT_ADVANCED";
+            this.BNT_ADVANCED.Size = new System.Drawing.Size(75, 30);
+            this.BNT_ADVANCED.TabIndex = 12;
+            this.BNT_ADVANCED.Text = "Advanced";
+            this.BNT_ADVANCED.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(10, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 15);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Port";
             // 
             // CMBO_BOX_PORTS
             // 
@@ -90,31 +109,23 @@
             this.BTN_CONNECT.UseVisualStyleBackColor = true;
             this.BTN_CONNECT.Click += new System.EventHandler(this.CONNECT);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(10, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 15);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Port";
-            // 
-            // BNT_ADVANCED
-            // 
-            this.BNT_ADVANCED.Location = new System.Drawing.Point(10, 151);
-            this.BNT_ADVANCED.Name = "BNT_ADVANCED";
-            this.BNT_ADVANCED.Size = new System.Drawing.Size(75, 30);
-            this.BNT_ADVANCED.TabIndex = 12;
-            this.BNT_ADVANCED.Text = "Advanced";
-            this.BNT_ADVANCED.UseVisualStyleBackColor = true;
-            // 
             // GRP_BOX_DATA
             // 
+            this.GRP_BOX_DATA.Controls.Add(this.listBox1);
             this.GRP_BOX_DATA.Location = new System.Drawing.Point(113, 12);
             this.GRP_BOX_DATA.Name = "GRP_BOX_DATA";
             this.GRP_BOX_DATA.Size = new System.Drawing.Size(427, 195);
             this.GRP_BOX_DATA.TabIndex = 4;
             this.GRP_BOX_DATA.TabStop = false;
             this.GRP_BOX_DATA.Text = "Serial Data";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(6, 20);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(415, 160);
+            this.listBox1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -126,6 +137,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.GRP_BOX_CONNECT.ResumeLayout(false);
+            this.GRP_BOX_DATA.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -139,6 +151,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BNT_ADVANCED;
         private System.Windows.Forms.GroupBox GRP_BOX_DATA;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

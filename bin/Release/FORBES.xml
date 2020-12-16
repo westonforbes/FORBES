@@ -320,6 +320,16 @@
             Whenever COM ports are added or removed, this event will be raised.
             </summary>
         </member>
+        <member name="E:FORBES.SERIAL_COMS_NAMESPACE.SERIAL_COM.MESSAGE_RECIEVED">
+            <summary>
+            When a serial message comes in, this event is raised.
+            </summary>
+        </member>
+        <member name="F:FORBES.SERIAL_COMS_NAMESPACE.SERIAL_COM.BUFFER">
+            <summary>
+            The serial buffer queue.
+            </summary>
+        </member>
         <member name="M:FORBES.SERIAL_COMS_NAMESPACE.SERIAL_COM.#ctor">
             <summary>
             Constructor for class.

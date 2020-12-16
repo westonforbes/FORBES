@@ -75,9 +75,17 @@ namespace FORBES.SERIAL_COMS_NAMESPACE
         /// Whenever COM ports are added or removed, this event will be raised.
         /// </summary>
         public event EventHandler PORTS_LIST_CHANGED;
+        /// <summary>
+        /// When a serial message comes in, this event is raised.
+        /// </summary>
+        public event EventHandler MESSAGE_RECIEVED;
         private List<string> RETAINED_PORT_LIST = new List<string> { };
         Timer CONNECTED_PORT_POLL_TIMER = new Timer();
         Timer PORTS_LIST_POLL_TIMER = new Timer();
+        /// <summary>
+        /// The serial buffer queue.
+        /// </summary>
+        public Queue<string> BUFFER = new Queue<string>();
 
         /// <summary>
         /// Constructor for class.
@@ -186,7 +194,12 @@ namespace FORBES.SERIAL_COMS_NAMESPACE
         private void DATA_RECIEVED(object SENDER, EventArgs E)
         {
             while (SERIAL_PORT.BytesToRead > 0)
-                Console.WriteLine(SERIAL_PORT.ReadLine());
+            {
+                string MESSAGE = SERIAL_PORT.ReadLine();
+                Console.WriteLine(MESSAGE);
+                BUFFER.Enqueue(MESSAGE);
+                MESSAGE_RECIEVED?.Invoke(null,null);
+            }
         }
 
         /// <summary>

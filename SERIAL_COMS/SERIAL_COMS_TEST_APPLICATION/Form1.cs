@@ -29,6 +29,7 @@ namespace SERIAL_COMS_TEST_APPLICATION
         {
             CONNECTION.DISCONNECTED += new EventHandler(DISCONNECTED_EVENT);
             CONNECTION.PORTS_LIST_CHANGED += new EventHandler(PORTS_LIST_CHANGED_EVENT);
+            CONNECTION.MESSAGE_RECIEVED += new EventHandler(MESSAGE_RECIEVED);
             GET_BAUD_RATES();
             GET_COM_PORTS();
             CONNECTION_CONTROLS_SWITCH(false);
@@ -44,6 +45,21 @@ namespace SERIAL_COMS_TEST_APPLICATION
         {
             CONNECTION_CONTROLS_SWITCH(false);
         } //When the program is connected to a port and it disconnects (whether thru proper means or unexpected), this method is called.
+
+        private void MESSAGE_RECIEVED(object SENDER, EventArgs E)
+        {
+            if (!InvokeRequired)
+            {
+                while (CONNECTION.BUFFER.Count > 0)
+                {
+                    listBox1.Items.Add(CONNECTION.BUFFER.Dequeue());
+                }
+            }
+            else
+            {
+                Invoke(new Action<object, EventArgs>(MESSAGE_RECIEVED), SENDER, E); //Invoke this same function using the UI thread rather than the POLL_TIMER thread.
+            }
+        }
 
         //Multithread access methods.
         private void GET_COM_PORTS(object SENDER = null, EventArgs E = null)

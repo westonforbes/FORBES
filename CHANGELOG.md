@@ -17,3 +17,7 @@ For change logs prior to 2020-11-25-01, see individual CHANGELOG.txt files in ea
 * Moved documentation over from my old table processor program into the TABLE_PROCESSOR namespace directory.
 * Brought over some old serial coms work. Gonna work on improving it. SERIAL_COMS_NAMESPACE is where its contained.
 
+## 2020-12-16-01
+
+* Added ASCII_RENDER_NAMESPACE.
+* Final revision. Migrating to FORBES_5 which is based on .NET 5.

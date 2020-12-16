@@ -35,3 +35,7 @@ This namespace and associated classes can determine where a point is in space gi
 ### SERIAL_COMS_NAMESPACE
 
 This namespace and associated classes handles serial connections.
+
+### ASCII_RENDER_NAMESPACE
+
+This namespace allows you to render gifs to the console.
